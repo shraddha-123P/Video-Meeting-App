@@ -1,28 +1,66 @@
-body{
-    font-family: Arial;
-    margin: 0;
-    text-align: center;
+body {
+  font-family: Arial;
+  margin: 0;
+  text-align: center;
 }
-header{
-    background: grey;
-    color: white;
-    padding: 15px;
-    display: flex ;
-    justify-content: space-between;
-    align-items: center;
+header {
+  background: grey;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-main{
-    padding:40px;
+main {
+  padding: 40px;
 }
-.participants{
-display:grid;
-grid-template-columns:repeat(3,120px);
-gap:20px;
-justify-content:center;
-margin-top:30px;
+#login {
+   display: flex;
+  padding: 15px;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
 }
-.person{
-    background:grey;
-    padding:20px;
-    border-radius:10px;
+#participants {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 60%;
+  margin: 30px auto;
 }
+.person {
+  background: #eee;
+  border-radius: 10px;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.person img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #333;
+  padding: 20px;
+}
+
+footer button {
+  margin: 5px;
+  padding: 10px 20px;
+}
+
+.end {
+  background: red;
+  color: white;
+}
+.join{
+  margin-top: 20px;
+}
+ 

@@ -4,20 +4,23 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Video Meeting App</title>
+        <link rel="stylesheet" href="index.css">
     </head>
     <body>
     <header>
             <h2> Voom Meeting App</h2>
-            <div class="header">
-                <button class="loginbtn">Login</button>
+            <div id="header">
+                <!-- <div id="login"> -->
+             <input type="text" id="username" placeholder="Enter your name">
+
+                <button id="loginbtn">Login</button>
             </div>
     </header>
     <main>
-        <div class="login">
-             <input type="text" class="username" placeholder="Enter your name">
-        </div>
-            <button class="join" style="display:none">Join  Meeting</button>
-        <div class="participants">
+        
+            <button class="join" style="display:none;">Join  Meeting</button>
+        
+            <div id="participants">
         <div class="person">
            <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png">
         </div>
@@ -37,7 +40,7 @@
         <button id="muteBtn">Mute</button>
         <button id="camBtn">Cam On</button>
         <button>Share Screen</button>
-        <button id="endcall"> End Call</button> 
+        <button id="endcall" class="end"> End Call</button> 
     </footer>
 <script src="script.js"></script>
 
