@@ -12,22 +12,24 @@ let endCall = document.getElementById("endcall")
 
 
 loginBtn.onclick = function(){
-
 let name = username.value
-
-headerArea.innerHTML =
-name + ' <button id="logoutBtn">Logout</button>'
-
+headerArea.innerHTML = name + ' <button id="logoutBtn">Logout</button>'
 joinBtn.style.display = "block"
-
 document.getElementById("login").style.display = "none"
-
 document.getElementById("logoutBtn").onclick = logout
 }
 
+// document.getElementById("logoutBtn").onclick = function(){
+// participants.style.display = "none"
+// controls.style.display = "none"
+// joinBtn.style.display = "none"
+// document.getElementById("login").style.display = "block"
+// username.value = ""
+// headerArea.innerHTML = '<button id="loginbtn">Login</button>'
+// document.getElementById("loginbtn").onclick = loginBtn.onclick
+// }
 
 joinBtn.onclick = function(){
-
 participants.style.display = "grid"
 controls.style.display = "block"
 }
@@ -72,10 +74,9 @@ controls.style.display = "none"
 joinBtn.style.display = "none"
 
 document.getElementById("login").style.display = "block"
-
+username.value = "" 
 headerArea.innerHTML =
 '<button id="loginbtn">Login</button>'
 
 document.getElementById("loginbtn").onclick = loginBtn.onclick
-
 }

@@ -26,7 +26,7 @@ main {
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   width: 60%;
-  margin: 30px auto;
+  margin: 10px auto;
 }
 .person {
   background: #eee;
@@ -61,6 +61,10 @@ footer button {
   color: white;
 }
 .join{
-  margin-top: 20px;
+display:block;
+margin:10px auto 25px auto;  
+padding:6px 12px;
 }
- 
+ main{
+  padding: 20px;
+ } 
