@@ -63,6 +63,8 @@ controls.style.display = "none"
 callActive = false
 }
 
+
+
 // logout
 function logout(){
     if (callActive == true) {
