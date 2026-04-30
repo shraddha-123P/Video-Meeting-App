@@ -1,3 +1,6 @@
+document.addEventListener("DOMContentLoaded", function(){
+
+
 let loginBtn = document.getElementById("loginbtn")
 let joinBtn = document.getElementById("join")
 let participants = document.getElementById("participants")
@@ -8,12 +11,13 @@ let headerArea = document.getElementById("header")
 let muteBtn = document.getElementById("muteBtn")
 let camBtn = document.getElementById("camBtn")
 let endCall = document.getElementById("endcall")
+
 let callActive = false
 
 
 // Login function
 
-function loginBtn (){
+function loginUser (){
 let name = username.value
 
 headerArea.innerHTML =
@@ -28,6 +32,29 @@ document.getElementById("login").style.display = "none"
 
 }
 loginBtn.onclick = loginUser
+
+// Logout function
+function logout(){
+
+participants.style.display = "none"
+controls.style.display = "none"
+joinBtn.style.display = "none"
+
+// show input again
+document.getElementById("login").style.display = "block"
+
+// clear input
+username.value = ""
+
+// bring login button back
+headerArea.innerHTML =
+'<button id="loginbtn">Login</button>'
+
+// RESELECT + REATTACH (THIS WAS YOUR BUG)
+loginBtn = document.getElementById("loginbtn")
+loginBtn.onclick = loginUser
+
+}
 
 // Join meeting
 joinBtn.onclick = function(){
@@ -63,8 +90,6 @@ controls.style.display = "none"
 callActive = false
 }
 
-
-
 // logout
 function logout(){
     if (callActive == true) {
@@ -76,12 +101,13 @@ controls.style.display = "none"
 joinBtn.style.display = "none"
 
 document.getElementById("login").style.display = "block"
-username.value = "block" 
-unsername.value =""
+username.value = "" 
+
 headerArea.innerHTML =
 '<button id="loginbtn">Login</button>'
 
-document.getElementById("loginbtn").onclick = loginBtn.onclick
+// document.getElementById("loginbtn").onclick = loginBtn.onclick
 loginBtn = document.getElementById("loginbtn")
 loginBtn.onclick = loginUser 
 }
+});
